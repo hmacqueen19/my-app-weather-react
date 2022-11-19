@@ -25,7 +25,10 @@ export default function App() {
             </div>
           </div>
           <p>
-            <a href="https://github.com/hmacqueen19/my-weather-application">
+            <a
+              href="https://github.com/hmacqueen19/my-app-weather-react"
+              alt="GitHub link"
+            >
               Open-source code
             </a>{" "}
             by Helen Macqueen
