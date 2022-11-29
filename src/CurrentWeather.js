@@ -15,7 +15,11 @@ export default function CurrentWeather() {
       <div className="row">
         <div className="col-6">
           <div className="clearfix weather-temperature">
-            <img src="" alt="clear" id="icon" />
+            <img
+              src="https://ss1.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="clear"
+              id="icon"
+            />
             <div id="temperature-information">
               <strong id="temperature-current"></strong>
               <span className="units">
