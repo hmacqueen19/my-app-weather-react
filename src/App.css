@@ -77,3 +77,77 @@
   height: 100px;
   width: 100px;
 }
+.location-bar {
+  width: 100%;
+  border-radius: 30px;
+  text-align: center;
+}
+.search-button {
+  width: 100%;
+  background-color: rgb(237, 161, 193);
+  border-radius: 30px;
+}
+.search-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+#submit-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.Form {
+  text-align: left;
+}
+.current-location {
+  width: 100%;
+  background-color: rgb(237, 161, 193);
+  border-radius: 30px;
+}
+.overview {
+  text-align: left;
+}
+.weather-temperature {
+  text-align: left;
+}
+
+.temperature-current {
+  padding-top: 0;
+  margin: 0 auto;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+.humidity-wind {
+  font-size: 50px;
+}
+
+.current-weather {
+  padding: 30px;
+  margin: 12px;
+  text-align: center;
+}
+.App .units {
+  font-size: 15px;
+  position: relative;
+  top: -18px;
+}
+.App .units .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.units .active:hover {
+  text-decoration: none;
+}
+#temperature-information {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 50px;
+}
+#last-updated,
+#description {
+  font-size: 13px;
+}
+#humidity-wind {
+  padding-top: 30px;
+}
