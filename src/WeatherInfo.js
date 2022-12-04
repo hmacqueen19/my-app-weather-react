@@ -1,6 +1,8 @@
 import React from "react";
 import BlanketInformation from "./BlanketInformation";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 import "./BlanketInformation.css";
 import "./styles.css";
 import "./Weather.css";
@@ -24,24 +26,15 @@ export default function WeatherInfo(props) {
         <div className="row">
           <div className="col-6">
             <div className="clearfix weather-temperature">
-              <img
-                src={props.data.icon}
-                alt={props.data.iconDescription}
-                id="icon"
-              />
+              <span className="float-left" id="icon">
+                <WeatherIcon code={props.data.icon} />
+              </span>
               <div id="temperature-information">
                 <strong id="temperature-current">
                   {props.data.temperature}
                 </strong>
                 <span className="units">
-                  <a href="#bar" id="fahrenheit" className="active">
-                    {" "}
-                    °F{" "}
-                  </a>{" "}
-                  |
-                  <a href="#foo" id="celsius">
-                    °C
-                  </a>
+                  <WeatherTemperature fahrenheit={props.data.temperature} />
                 </span>
               </div>
             </div>
