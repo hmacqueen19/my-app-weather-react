@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 import "./Weather.css";
 import "./BlanketInformation.css";
+import FormattedDate from "./FormattedDate";
 import BlanketInformation from "./BlanketInformation";
 import axios from "axios";
 
@@ -10,6 +11,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
@@ -62,8 +64,9 @@ export default function Weather(props) {
                     <h2 id="current-location" className="card-title"></h2>
                     <ul>
                       <li id="last-updated">
-                        Last updated:{" "}
-                        <span id="current-date">{weatherData.date}</span>
+                        <span id="current-date">
+                          <FormattedDate date={weatherData.date} />
+                        </span>
                       </li>
                       <li id="description">{weatherData.description}</li>
                     </ul>
