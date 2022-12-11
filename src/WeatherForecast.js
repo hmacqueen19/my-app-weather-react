@@ -24,19 +24,21 @@ export default function WeatherForecast(props) {
   }
   if (loaded) {
     return (
-      <div className="WeatherForecast">
-        <div className="row">
-          {forecast.map(function (dailyForecast, index) {
-            if (index < 6) {
-              return (
-                <div className="col" key={index}>
-                  <WeatherForecastDay data={dailyForecast} />
-                </div>
-              );
-            } else {
-              return null;
-            }
-          })}
+      <div className="col-12">
+        <div className="card WeatherForecast">
+          <div className="row">
+            {forecast.map(function (dailyForecast, index) {
+              if (index < 6) {
+                return (
+                  <div className="col" key={index}>
+                    <WeatherForecastDay data={dailyForecast} />
+                  </div>
+                );
+              } else {
+                return null;
+              }
+            })}
+          </div>
         </div>
       </div>
     );

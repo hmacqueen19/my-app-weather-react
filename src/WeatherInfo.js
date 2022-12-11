@@ -1,8 +1,8 @@
 import React from "react";
-import BlanketInformation from "./BlanketInformation";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import "./WeatherInfo.css";
 import "./BlanketInformation.css";
 import "./styles.css";
 import "./Weather.css";
@@ -12,7 +12,6 @@ export default function WeatherInfo(props) {
     <div className="col-12">
       <div className="card current-weather">
         <div className="overview">
-          <h2 id="current-location" className="card-title"></h2>
           <ul>
             <li id="cityname">{props.data.city}</li>
             <li id="last-updated">
@@ -27,7 +26,7 @@ export default function WeatherInfo(props) {
           <div className="col-6">
             <div className="clearfix weather-temperature">
               <span className="float-left" id="icon">
-                <WeatherIcon code={props.data.icon} size={60} />
+                <WeatherIcon code={props.data.icon} size={70} />
               </span>
               <div id="temperature-information">
                 <span className="units">
@@ -54,8 +53,6 @@ export default function WeatherInfo(props) {
           </div>
         </div>
       </div>
-      <div className="weather-forecast" id="forecast"></div>
-      <div className="col-12"></div>
     </div>
   );
 }

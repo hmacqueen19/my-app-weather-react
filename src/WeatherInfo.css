@@ -1,0 +1,54 @@
+.current-location {
+  width: 100%;
+  background-color: rgb(237, 161, 193);
+  border-radius: 30px;
+}
+.overview {
+  text-align: left;
+}
+.weather-temperature {
+  text-align: left;
+}
+
+.temperature-current {
+  padding-top: 0;
+  margin: 0 auto;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+.humidity-wind {
+  font-size: 50px;
+}
+
+.current-weather {
+  padding: 30px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.units .active:hover {
+  text-decoration: none;
+}
+#temperature-information {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 50px;
+}
+#last-updated,
+#description {
+  font-size: 13px;
+}
+#humidity-wind {
+  padding-top: 30px;
+}
+#icon canvas {
+  margin-right: 5px;
+  height: 70px;
+  width: 70px;
+  margin-top: 15px;
+}
+#cityname {
+  font-weight: bold;
+  font-size: 50px;
+}
