@@ -45,12 +45,30 @@ export default function BlanketInformation(props) {
     },
   ];
 
-  return (
-    <div className="card blanket-information">
-      <div className="card-body">
-        <h3 id="yarn-card-title">Bernat Velvet Yarn Color: </h3>
-        <h5 id="yarn-color">Yarn Color and Range</h5>
+  function findColor(temperature) {
+    // setColor(
+    //   yarnColors.find((yarnColor) => {
+    //     return temperature <= yarnColor.maxTemp;
+    //   })
+    // );
+    for (let i = 0; i < yarnColors.length; i++) {
+      if (temperature <= yarnColors[i].maxTemp) {
+        setColor(yarnColors[i].color);
+        return;
+      }
+    }
+  }
+
+  if (color) {
+    return (
+      <div className="card blanket-information">
+        <div className="card-body">
+          <h3 id="yarn-card-title">Bernat Velvet Yarn Color: </h3>
+          <h5 id="yarn-color">{color}</h5>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    findColor(props.dailyHighTemperature);
+  }
 }
