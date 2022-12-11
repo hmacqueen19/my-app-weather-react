@@ -15,6 +15,7 @@ export default function Weather(props) {
       coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
+      temperatureMax: Math.round(response.data.main.temp.max),
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
       city: response.data.name,
@@ -48,7 +49,7 @@ export default function Weather(props) {
             <div className="row">
               <form onSubmit={handleSubmit} id="search-form">
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-9">
                     <input
                       id="location-bar"
                       className="location-bar"
@@ -65,19 +66,13 @@ export default function Weather(props) {
                       value="Search"
                     />
                   </div>
-                  <div className="col-3">
-                    <input
-                      id="submit-button"
-                      className="current-location shadow"
-                      type="submit"
-                      value="Current Location"
-                    />
-                  </div>
                 </div>
               </form>
               <WeatherInfo data={weatherData} />
               <WeatherForecast coordinates={weatherData.coordinates} />
-              <BlanketInformation />
+              <BlanketInformation
+                dailyHighTemperature={weatherData.temperatureMax}
+              />
             </div>
           </div>
         </div>

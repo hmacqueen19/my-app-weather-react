@@ -1,6 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import "./BlanketInformation.css";
-export default function BlanketInformation() {
+export default function BlanketInformation(props) {
+  const [color, setColor] = useState();
+  let yarnColors = [
+    {
+      color: "White",
+      maxTemp: 24,
+    },
+    {
+      color: "Vapor Gray",
+      maxTemp: 33,
+    },
+    {
+      color: "Smokey Green",
+      maxTemp: 42,
+    },
+    {
+      color: "Smokey Blue",
+      maxTemp: 51,
+    },
+    {
+      color: "Indigo",
+      maxTemp: 60,
+    },
+    {
+      color: "Jewel Blue",
+      maxTemp: 69,
+    },
+    {
+      color: "Gray Orchid",
+      maxTemp: 78,
+    },
+    {
+      color: "Blush Pink",
+      maxTemp: 87,
+    },
+    {
+      color: "Pomegranite",
+      maxTemp: 96,
+    },
+    {
+      color: "Soft Sunshine",
+      maxTemp: 200,
+    },
+  ];
+
   return (
     <div className="card blanket-information">
       <div className="card-body">
